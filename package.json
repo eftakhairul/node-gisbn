@@ -1,0 +1,29 @@
+{
+  "name": "gisbn",
+  "version": "1.0.0",
+  "description": "It fetches all book information by ISBN number based on Google Book API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eftakhairul/node-gisbn"
+  },
+  "keywords": [
+    "isbn",
+    "google",
+    "book",
+    "book_api",
+    "gisbn",
+    "google_book",
+    "api"
+  ],
+  "author": "Eftakhairul Islam <eftakhairul@gmail.com> (http://eftakhairul.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/eftakhairul/node-gisbn/issues",
+    "email": "eftakhairul@gmail.com"
+  },
+  "homepage": "https://github.com/eftakhairul/node-gisbn"
+}
