@@ -5,7 +5,7 @@
     var https       = require('https');
 
     // Base url for Google Books API  (Google Book API V1)
-    var baseUrl = 'https://www.googleapis.com/books/v1/volumes?q=isbn&';
+    var baseUrl     = 'https://www.googleapis.com/books/v1/volumes?';
 
     /**
      * Gisbn constructor.
@@ -20,10 +20,6 @@
         this.isbn     = typeof isbn     !== 'undefined' ? isbn : null;
         this.key      = typeof key      !== 'undefined' ? key :'AIzaSyDKepjfaVBRcgsnPALw5s2UNyfOk-1FHUU';
         this.country  = typeof country  !== 'undefined' ? country :'ca';
-        this.data = '';
-
-      //  this.fetch();
-      //  this.data     = global.data;
     };
 
 
@@ -38,18 +34,18 @@
     }
 
     /**
-     * Set new ISBN number
+     * Fetch all information from google book api
      *
-     * @private
+     * @param {function} callBack method
+     * @return object
      */
-    Gisbn.prototype.fetch = function(helloRain) {
+    Gisbn.prototype.fetch = function(callBack) {
 
-        var data = '';
-        // Create the request uri
+      // Create the request uri
         var query = {
-            key:     this.key,
-            country: this.country,
-            isbn:    this.isbn
+            key:        this.key,
+            country:    this.country,
+            q:          'isbn:' + this.isbn
         };
 
         //Book API Request URI
@@ -64,35 +60,40 @@
 
             res.on('end', function() {
                 // Parse response body
-                global.data = JSON.parse(body);
-                helloRain();
+                try {
+                    var responseObject = JSON.parse(body);
+                    callBack(null, {
+                        id:             responseObject.items[0].kind,
+                        selflink:       responseObject.items[0].selfLink,
+                        title:          responseObject.items[0].volumeInfo.title,
+                        authors:        responseObject.items[0].volumeInfo.authors,
+                        publisher:      responseObject.items[0].volumeInfo.publisher,
+                        publisheddate:  responseObject.items[0].volumeInfo.publishedDate,
+                        description:    responseObject.items[0].volumeInfo.description,
+                        isbn13:         responseObject.items[0].volumeInfo.industryIdentifiers[0].identifier,
+                        isbn10:         responseObject.items[0].volumeInfo.industryIdentifiers[1].identifier,
+                        totalpage:      responseObject.items[0].volumeInfo.pageCount,
+                        rating:         responseObject.items[0].volumeInfo.averageRating,
+                        previewlink:    responseObject.items[0].volumeInfo.previewLink,
+                        smallThumbnail: responseObject.items[0].volumeInfo.imageLinks.smallThumbnail,
+                        thumbnail:      responseObject.items[0].volumeInfo.imageLinks.thumbnail
+                    });
+
+                } catch (e) {
+                    callBack(e, null);
+                }
             });
-        });
 
-
-
-        req.end();
-        console.log(global.data);
-    }
-
-    /**
-     * Set new ISBN number
-     *
-     * @private
-     */
-    Gisbn.prototype.data = function() {
-        return this.data;
+            res.on('error', function(err) {
+                // handle errors with the request itself
+                console.error('Error with the request:', err.message);
+                callBack(err, null);
+            });
+        }).end();
     }
 
     /**
      * Exports googleapis.
      */
     module.exports = Gisbn;
-
-    var gisbn = new Gisbn("0262033844", "AIzaSyDKepjfaVBRcgsnPALw5s2UNyfOk-1FHUU");
-    gisbn.fetch(function(){
-        console.log(global.data);
-    });
-    //gisbn.setIsbn('in');
-
 })();
