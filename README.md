@@ -29,7 +29,8 @@ $ npm install -g gisbn --save
 
 ## Examples
 ```js
-var Gisbn  = new Gisbn("0262033844", "AIzaSyDKepjfaVBRcgsnPALw5s2UNyfOk-1FHUU", "ca");
+var Gisb = require('Gisbn');
+Gisbn    = new Gisbn("0262033844", "AIzaSyDKepjfaVBRcgsnPALw5s2UNyfOk-1FHUU", "ca"
 
 Gisbn.fetch(function(err, book){
     console.log(book);
