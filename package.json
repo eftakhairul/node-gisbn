@@ -17,6 +17,7 @@
     "book_api",
     "gisbn",
     "google_book",
+    "googlebook",
     "api"
   ],
   "author": "Eftakhairul Islam <eftakhairul@gmail.com> (http://eftakhairul.com/)",
