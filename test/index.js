@@ -6,7 +6,7 @@ var expect      = require('chai').expect;
 describe('#escape', function() {
     it('converts & into &amp;', function() {
         Gisbn.fetch(function(err, book) {
-            expect(book).have.property("title", "Introduction to Algorithms");
+            expect(book).to.have.property("title", "Introduction to Algorithms");
         });
     });
 });
