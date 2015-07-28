@@ -4,7 +4,7 @@
   "description": "It fetches all book information by ISBN number based on Google Book API",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "make test"
   },
   "repository": {
     "type": "git",
@@ -26,5 +26,9 @@
     "url": "https://github.com/eftakhairul/node-gisbn/issues",
     "email": "eftakhairul@gmail.com"
   },
-  "homepage": "https://github.com/eftakhairul/node-gisbn"
+  "homepage": "https://github.com/eftakhairul/node-gisbn",
+  "devDependencies": {
+    "chai": "^3.2.0",
+    "mocha": "^2.2.5"
+  }
 }

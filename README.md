@@ -18,13 +18,13 @@ You don't have to call manually Google API with ISBN number. This library will d
 Install package globally:
 
 ```sh
-$ npm install -g node-gisbn
+$ npm install -g gisbn
 ```
 
 Or inside project:
 
 ```sh
-$ npm install -g node-gisbn --save
+$ npm install -g gisbn --save
 ```
 
 
