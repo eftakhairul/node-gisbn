@@ -11,7 +11,7 @@ You don't have to call manually Google API with ISBN number. This library will d
 
 
 ### Version
-0.0.1
+1.0.4
 
 
 ### Installation
@@ -50,31 +50,6 @@ Gisbn.fetch(function(err, book){
   totalpage: 1292,
   rating: 4,
   previewlink: 'http://books.google.ca/books?id=i-bUBQAAQBAJ&printsec=frontcover&dq=isbn:0262033844&hl=&cd=1&source=gbs_api',
-  smallThumbnail: 'http://books.google.ca/books/content?id=i-bUBQAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api',
+  smallthumbnail: 'http://books.google.ca/books/content?id=i-bUBQAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api',
   thumbnail: 'http://books.google.ca/books/content?id=i-bUBQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api' }
 ```
-
-### Development
-
-Want to contribute? Great!
-
-1. Fork it ( https://github.com/eftakhairul/node-gisbn/fork )
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create a new Pull Request
-
-
-Author
------------
-[Eftakhairul Islam] - eftakhairul [at] gmail [dot] com
-[Eftakhairul Islam]:http://eftakhairul.com/
-
-
-License
-----
-MIT
-
-
-
-

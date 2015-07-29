@@ -37,7 +37,7 @@
      * Fetch all information from google book api
      *
      * @param {function} callBack method
-     * @return object
+     * @return Object
      */
     Gisbn.prototype.fetch = function(callBack) {
 
@@ -75,7 +75,7 @@
                         totalpage:      responseObject.items[0].volumeInfo.pageCount,
                         rating:         responseObject.items[0].volumeInfo.averageRating,
                         previewlink:    responseObject.items[0].volumeInfo.previewLink,
-                        smallThumbnail: responseObject.items[0].volumeInfo.imageLinks.smallThumbnail,
+                        smallthumbnail: responseObject.items[0].volumeInfo.imageLinks.smallThumbnail,
                         thumbnail:      responseObject.items[0].volumeInfo.imageLinks.thumbnail
                     });
 
