@@ -1,5 +1,5 @@
 # node-gisbn
-[![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/eftakhairul/gisbn/master/LICENSE.txt)
+[![Build Status](https://travis-ci.org/eftakhairul/gisbn.svg?branch=master)](https://travis-ci.org/eftakhairul/node-gisbn) [![GitHub issues](https://img.shields.io/github/issues/eftakhairul/gisbn.svg)](https://github.com/eftakhairul/node-gisbn/issues)  [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/eftakhairul/node-gisbn/master/LICENSE.txt)
 
 It fetches book's information by ISBN number based on Google Book API.
 
