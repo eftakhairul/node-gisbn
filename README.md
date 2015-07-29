@@ -47,7 +47,7 @@ Gisbn.fetch(function(err, book){
   description: 'A new edition of the essential text and professional reference, with substantial newmaterial on such topics as vEB trees, multithreaded algorithms, dynamic programming, and edge-baseflow.',
   isbn13: '9780262033848',
   isbn10: '0262033844',
-  totalpage: 1292,
+  totalpages: 1292,
   rating: 4,
   previewlink: 'http://books.google.ca/books?id=i-bUBQAAQBAJ&printsec=frontcover&dq=isbn:0262033844&hl=&cd=1&source=gbs_api',
   smallthumbnail: 'http://books.google.ca/books/content?id=i-bUBQAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api',

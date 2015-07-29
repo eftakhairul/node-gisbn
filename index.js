@@ -72,7 +72,7 @@
                         description:    responseObject.items[0].volumeInfo.description,
                         isbn13:         responseObject.items[0].volumeInfo.industryIdentifiers[0].identifier,
                         isbn10:         responseObject.items[0].volumeInfo.industryIdentifiers[1].identifier,
-                        totalpage:      responseObject.items[0].volumeInfo.pageCount,
+                        totalpages:     parseInt(responseObject.items[0].volumeInfo.pageCount, 10),
                         rating:         responseObject.items[0].volumeInfo.averageRating,
                         previewlink:    responseObject.items[0].volumeInfo.previewLink,
                         smallthumbnail: responseObject.items[0].volumeInfo.imageLinks.smallThumbnail,
