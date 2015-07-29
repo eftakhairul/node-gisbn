@@ -1,6 +1,6 @@
 {
   "name": "gisbn",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "It fetches all book information by ISBN number based on Google Book API",
   "main": "index.js",
   "scripts": {

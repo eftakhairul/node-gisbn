@@ -11,7 +11,7 @@ You don't have to call manually Google API with ISBN number. This library will d
 
 
 ### Version
-1.0.4
+1.0.5
 
 
 ### Installation
