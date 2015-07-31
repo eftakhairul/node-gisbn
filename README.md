@@ -11,7 +11,7 @@ You don't have to call manually Google API with ISBN number. This library will d
 
 
 ### Version
-1.0.5
+1.0.6
 
 
 ### Installation
@@ -52,4 +52,21 @@ Gisbn.fetch(function(err, book){
   previewlink: 'http://books.google.ca/books?id=i-bUBQAAQBAJ&printsec=frontcover&dq=isbn:0262033844&hl=&cd=1&source=gbs_api',
   smallthumbnail: 'http://books.google.ca/books/content?id=i-bUBQAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api',
   thumbnail: 'http://books.google.ca/books/content?id=i-bUBQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api' }
+  
+  
+//set new isbn
+Gisbn.setIsbn(9780804139298);
+
+Gisbn.fetch(function(err, book){
+    console.log('Title: ' + book.title);
+    
+    console.log('Description: ' + book.description);
+});
+
+//Output
+Title: Zero to One
+
+Description: The billionaire Silicon Valley entrepreneur behind such companies as PayPal and Facebook 
+outlines an innovative theory and formula for building the companies of the future by creating and 
+monopolizing new markets instead of competing in old ones. 200,000 first printing.
 ```
