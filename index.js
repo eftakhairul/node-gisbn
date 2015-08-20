@@ -36,10 +36,10 @@
     /**
      * Fetch all information from google book api
      *
-     * @param {function} callBack method
+     * @param {function} callback method
      * @return Object
      */
-    Gisbn.prototype.fetch = function(callBack) {
+    Gisbn.prototype.fetch = function(callback) {
 
       // Create the request uri
         var query = {
@@ -62,7 +62,7 @@
                 // Parse response body
                 try {
                     var responseObject = JSON.parse(body);
-                    callBack(null, {
+                    callback(null, {
                         id:             responseObject.items[0].kind,
                         selflink:       responseObject.items[0].selfLink,
                         title:          responseObject.items[0].volumeInfo.title,
@@ -80,14 +80,14 @@
                     });
 
                 } catch (e) {
-                    callBack(e, null);
+                    callback(e, null);
                 }
             });
 
             res.on('error', function(err) {
                 // handle errors with the request itself
                 console.error('Error with the request:', err.message);
-                callBack(err, null);
+                callback(err, null);
             });
         }).end();
     }
