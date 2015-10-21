@@ -41,6 +41,9 @@
      */
     Gisbn.prototype.fetch = function(callback) {
 
+        //check callback
+        callback = (typeof callback === 'function') ? callback : function() {};
+
       // Create the request uri
         var query = {
             key:        this.key,
